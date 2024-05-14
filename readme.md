@@ -34,7 +34,7 @@ https://docs.openwebui.com/tutorial/litellm/
 
 ### ollama
 
-ディレクトリの直下で docker compose を実行
+ディレクトリの直下で docker compose を実行   
 ※ `docker-compose.yaml` で GPU を使う or 使わないの設定する
 
 ```shell
