@@ -1,0 +1,6 @@
+dify/volumes
+open_webui/volumes
+ollama/volumes
+temp
+dify2openai/docker-compose.yaml
+open_webui/litellm/config.yaml

@@ -1,0 +1,6 @@
+model_list:
+  - model_name: dify-gpt4-turbo
+    litellm_params:
+      model: openai/dify
+      api_base: http://<ip address>:54323/v1/ # set ip address of your pc
+      api_key: "app-xxxxxxxxxxxxxxxxxxxxxxxx" # set api key of dify model

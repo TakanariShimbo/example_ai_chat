@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  proxy-server:
+    image: takanarishimbo/dify2openai:v1.0.0
+    container_name: dify2openai
+    restart: always
+    ports:
+      - "54323:3000"
+    environment:
+      - DIFY_API_URL=http://<ip address>:54322/v1 # set ip address of your pc
+      - BOT_TYPE=Chat

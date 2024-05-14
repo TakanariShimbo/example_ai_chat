@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    ports:
+      - "54321:8080"
+    volumes:
+      - ./volumes/data:/app/backend/data
+      - ./litellm/config.yaml:/app/backend/data/litellm/config.yaml
+    restart: always
