@@ -30,11 +30,15 @@ https://github.com/open-webui/open-webui
 
 https://docs.openwebui.com/tutorial/litellm/
 
-# Use
+`docker-compose.yaml` の環境変数は以下を参考に設定した
+
+https://docs.openwebui.com/getting-started/env-configuration/
+
+# Get Started
 
 ### ollama
 
-ディレクトリの直下で docker compose を実行   
+ディレクトリの直下で docker compose を実行  
 ※ `docker-compose.yaml` で GPU を使う or 使わないの設定する
 
 ```shell
@@ -81,7 +85,8 @@ docker-compose up -d
 
 ### open_webui
 
-litellm dir の`config.yaml.sample` を参考に `config.yaml` を作成し  
+litellm dir の`config.yaml.sample` を参考に `config.yaml` を  
+`docker-compose.yaml.sample` を参考に `docker-compose.yaml` を作成し  
  その後、ディレクトリの直下で docker compose を実行
 
 ```shell
