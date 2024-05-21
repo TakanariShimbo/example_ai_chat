@@ -61,7 +61,8 @@ ollama run llama2
 
 ### dify
 
-ディレクトリの直下で docker compose を実行
+`.env.sample` を参考に `.env` を作成し  
+その後、ディレクトリの直下で docker compose を実行
 
 ```shell
 cd dify
@@ -76,7 +77,7 @@ docker-compose up -d
 ### dify2openai
 
 `docker-compose.yaml.sample` を参考に `docker-compose.yaml` を作成し  
- その後、ディレクトリの直下で docker compose を実行
+その後、ディレクトリの直下で docker compose を実行
 
 ```shell
 cd dify2openai
@@ -87,7 +88,7 @@ docker-compose up -d
 
 litellm dir の`config.yaml.sample` を参考に `config.yaml` を  
 `docker-compose.yaml.sample` を参考に `docker-compose.yaml` を作成し  
- その後、ディレクトリの直下で docker compose を実行
+その後、ディレクトリの直下で docker compose を実行
 
 ```shell
 cd open_webui
