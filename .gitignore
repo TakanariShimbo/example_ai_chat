@@ -5,3 +5,4 @@ temp
 dify2openai/docker-compose.yaml
 open_webui/litellm/config.yaml
 open_webui/docker-compose.yaml
+.env
