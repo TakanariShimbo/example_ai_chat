@@ -4,9 +4,9 @@ services:
   proxy-server:
     image: takanarishimbo/dify2openai:v1.0.0
     container_name: dify2openai
-    restart: always
     ports:
       - "${DIFY2OPENAI_PORT}:3000"
     environment:
       - "DIFY_API_URL=http://${DIFY_IP}:${DIFY_PORT}/v1"
       - "BOT_TYPE=Chat"
+    restart: always
