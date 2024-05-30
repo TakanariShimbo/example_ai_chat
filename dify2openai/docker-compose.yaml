@@ -8,5 +8,5 @@ services:
     ports:
       - "${DIFY2OPENAI_PORT}:3000"
     environment:
-      - DIFY_API_URL: "http://${DIFY_IP}:${DIFY_PORT}/v1" # set ip address of your pc
-      - BOT_TYPE: Chat
+      - "DIFY_API_URL=http://${DIFY_IP}:${DIFY_PORT}/v1"
+      - "BOT_TYPE=Chat"
