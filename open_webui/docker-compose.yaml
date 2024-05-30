@@ -7,10 +7,10 @@ services:
     ports:
       - "${OPEN_WEBUI_PORT}:8080"
     environment:
-      - OLLAMA_BASE_URL: "http://${OLLAMA_IP}:${OLLAMA_PORT}"
-      - OPENAI_API_KEYS: "${OPENAI_API_KEY}"
-      - ENABLE_MODEL_FILTER: "True"
-      - MODEL_FILTER_LIST: "${MODEL_FILTER_LIST}"
+      - "OLLAMA_BASE_URL=http://${OLLAMA_IP}:${OLLAMA_PORT}"
+      - "OPENAI_API_KEYS=${OPENAI_API_KEY}"
+      - "ENABLE_MODEL_FILTER=True"
+      - "MODEL_FILTER_LIST=${MODEL_FILTER_LIST}"
     volumes:
       - ./volumes/data:/app/backend/data
       - ./litellm/config.yaml:/app/backend/data/litellm/config.yaml
