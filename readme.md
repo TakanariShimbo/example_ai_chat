@@ -38,7 +38,7 @@ https://docs.openwebui.com/getting-started/env-configuration/
 
 ### ollama
 
-`docker-compose.yaml.sample` を参考に `docker-compose.yaml` を作成し  
+`.env.sample` を参考に `.env` を作成し  
 ディレクトリの直下で docker compose を実行  
 ※ `docker-compose.yaml` で GPU を使う or 使わないの設定する
 
@@ -62,7 +62,6 @@ ollama run llama2
 
 ### dify
 
-`docker-compose.yaml.sample` を参考に `docker-compose.yaml` を
 `.env.sample` を参考に `.env` を作成し  
 その後、ディレクトリの直下で docker compose を実行
 
@@ -78,7 +77,7 @@ docker-compose up -d
 
 ### dify2openai
 
-`docker-compose.yaml.sample` を参考に `docker-compose.yaml` を作成し  
+`.env.sample` を参考に `.env` を作成し  
 その後、ディレクトリの直下で docker compose を実行
 
 ```shell
@@ -89,7 +88,7 @@ docker-compose up -d
 ### open_webui
 
 litellm dir の`config.yaml.sample` を参考に `config.yaml` を  
-`docker-compose.yaml.sample` を参考に `docker-compose.yaml` を作成し  
+`.env.sample` を参考に `.env` を作成し  
 その後、ディレクトリの直下で docker compose を実行
 
 ```shell
