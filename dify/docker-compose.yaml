@@ -624,5 +624,5 @@ services:
       - web
 
     ports:
-      - "54322:80"
+      - "${DIFY_PORT}:80"
       #- "443:443"

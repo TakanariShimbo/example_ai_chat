@@ -5,7 +5,7 @@ services:
     image: ollama/ollama
     container_name: ollama
     ports:
-      - "11434:11434"
+      - "${OLLAMA_PORT}:11434"
     volumes:
       - ./volumes/ollama:/root/.ollama
     # GPU ON

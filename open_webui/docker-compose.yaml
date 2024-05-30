@@ -7,10 +7,10 @@ services:
     ports:
       - "54321:8080"
     environment:
-      - "OLLAMA_BASE_URL=http://<ip address>:11434" # set ip address of your pc
-      - "OPENAI_API_KEYS=sk-xxxxxxxxxxxxxxxxxxxxxx" # set your openai key
-      - "ENABLE_MODEL_FILTER=True"
-      - "MODEL_FILTER_LIST=gpt-4-turbo;gpt-4o;gpt-3.5-turbo" # set whitelist
+      - OLLAMA_BASE_URL: "http://${OLLAMA_IP}:${OLLAMA_PORT}"
+      - OPENAI_API_KEYS: "${OPENAI_API_KEY}"
+      - ENABLE_MODEL_FILTER: "True"
+      - MODEL_FILTER_LIST: "${MODEL_FILTER_LIST}"
     volumes:
       - ./volumes/data:/app/backend/data
       - ./litellm/config.yaml:/app/backend/data/litellm/config.yaml

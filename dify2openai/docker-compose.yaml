@@ -6,7 +6,7 @@ services:
     container_name: dify2openai
     restart: always
     ports:
-      - "54323:3000"
+      - "${DIFY2OPENAI_PORT}:3000"
     environment:
-      - DIFY_API_URL=http://<ip address>:54322/v1 # set ip address of your pc
-      - BOT_TYPE=Chat
+      - DIFY_API_URL: "http://${DIFY_IP}:${DIFY_PORT}/v1" # set ip address of your pc
+      - BOT_TYPE: Chat
