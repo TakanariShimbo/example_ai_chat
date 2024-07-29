@@ -7,11 +7,34 @@ services:
     ports:
       - "${OPEN_WEBUI_PORT}:8080"
     environment:
-      - "OLLAMA_BASE_URL=http://${OLLAMA_IP}:${OLLAMA_PORT}"
+      # openai key
       - "OPENAI_API_KEYS=${OPENAI_API_KEY}"
+      # chat models
       - "ENABLE_MODEL_FILTER=True"
       - "MODEL_FILTER_LIST=${MODEL_FILTER_LIST}"
+      # web searcher
+      - "ENABLE_RAG_WEB_SEARCH=True"
+      - "RAG_WEB_SEARCH_ENGINE=searxng"
+      - "RAG_WEB_SEARCH_RESULT_COUNT=3"
+      - "RAG_WEB_SEARCH_CONCURRENT_REQUESTS=10"
+      - "SEARXNG_QUERY_URL=http://searxng:8080/search?q=<query>"
+      # image generator
+      - "ENABLE_IMAGE_GENERATION=True"
+      - "IMAGE_GENERATION_ENGINE=openai"
+      - "IMAGE_GENERATION_MODEL=dall-e-3"
+      - "IMAGE_SIZE=1792x1024"
+      # ollama
+      - "OLLAMA_BASE_URL=http://${OLLAMA_IP}:${OLLAMA_PORT}"
     volumes:
       - ./volumes/data:/app/backend/data
       - ./litellm/config.yaml:/app/backend/data/litellm/config.yaml
+    restart: always
+
+  searxng:
+    image: searxng/searxng:latest
+    container_name: searxng
+    ports:
+      - "${SEARXNG_PORT}:8080"
+    volumes:
+      - ./searxng:/etc/searxng
     restart: always
